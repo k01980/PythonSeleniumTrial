@@ -14,7 +14,7 @@ chrome_options = webdriver.ChromeOptions()
 # Add your options as needed    
 options = [
   # Define window size here
-   "--window-size=1200,1200",
+   "--window-size=192t0,1200",
     "--ignore-certificate-errors"
  
     #"--headless",
@@ -33,7 +33,7 @@ for option in options:
     
 driver = webdriver.Chrome(options = chrome_options)
 
-driver.get('http://github.com')
+driver.get('https://bizschool.naver.com/')
 print(driver.title)
 with open('./GitHub_Action_Results.txt', 'w') as f:
     f.write(f"This was written with a GitHub action {driver.title}")
